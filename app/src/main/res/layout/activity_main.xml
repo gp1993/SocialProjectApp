@@ -3,18 +3,16 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/blue"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Send Data"
-        android:id="@+id/button"
-        android:layout_marginTop="69dp"
-        android:layout_below="@+id/textView1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="sendData"/>
+        android:id="@+id/sendButton"
+        android:onClick="sendData"
+        android:layout_below="@+id/EditText2"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -44,19 +42,19 @@
         android:inputType="textPersonName"
         android:text="Name"
         android:ems="10"
-        android:id="@+id/editText1"
-        android:layout_alignBottom="@+id/textView1"
-        android:layout_toRightOf="@+id/button"
-        android:layout_toEndOf="@+id/button" />
+        android:id="@+id/EditText1"
+        android:layout_above="@+id/textView2"
+        android:layout_alignLeft="@+id/EditText2"
+        android:layout_alignStart="@+id/EditText2" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editText2"
+        android:id="@+id/EditText2"
         android:layout_alignBottom="@+id/textView2"
-        android:layout_toRightOf="@+id/button"
-        android:layout_toEndOf="@+id/button" />
+        android:layout_alignLeft="@+id/sendButton"
+        android:layout_alignStart="@+id/sendButton" />
 
 </RelativeLayout>
