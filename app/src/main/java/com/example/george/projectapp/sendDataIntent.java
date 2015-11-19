@@ -14,17 +14,18 @@ import java.util.Scanner;
 
 
 public class sendDataIntent extends IntentService {
+    public static final String PARAM_USER = "";
+    public static final String PARAM_PASS = "";
+    public static String param = "";
+
     public sendDataIntent() {
         super("sendDataIntent");
 
     }
 
-    public static final String PARAM_USER = "";
-    public static final String PARAM_PASS = "";
    @Override
     protected void onHandleIntent(Intent mServiceIntent) {
 
-        String param="";
         try {
            param = "param1=" + URLEncoder.encode(PARAM_USER, "UTF-8") + "&param2=" + URLEncoder.encode(PARAM_PASS, "UTF-8");
        } catch (UnsupportedEncodingException e) {
